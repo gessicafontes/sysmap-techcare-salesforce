@@ -1,18 +1,33 @@
-# Salesforce DX Project: Next Steps
+# TechCare Support
+A TechCare é uma empresa de suporte a clientes que lançou um Portal de Atendimento em Salesforce. 
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+# 📋 Documentações
+[Documentação Adm](./Documentation%20Adm.md)
+[Documentação Dev](./Documentation%20Dev.md)
 
-## How Do You Plan to Deploy Your Changes?
+# 🔧 Instalação
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Copie o repositório para uma pasta vazia
+```git clone {link}```
 
-## Configure Your Salesforce DX Project
+Autorize a Org em que irá instalar o projeto
+```CTRL + ALT + P```
+```SFDX: Authorize an Org```
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+Faça o deploy para sua Org
+```SFDX: Deploy This Source to Org```
 
-## Read All About It
+# ⚙️ Execução dos Testes
+Abra a extensão testing e clique no botão de iniciar todos os testes. O coverage de toda a org está em 98%.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+# 📦 Implantação
+Caso seja necessário fazer a implantação em production.
+
+1. Pré-requisitos: Ter a conexão com a production configurada e perfil com permissão
+2. Vá em: `Setup -> Outbound Change Sets`
+3. Clique em `new` e dê um nome
+4. Adicione os componentes que quer fazer a exportação
+5. Envie o change set para production
+6. Em Production, vá em `Inboud Change Sets`
+7. Clique em `Deploy`
+
