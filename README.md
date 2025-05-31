@@ -8,14 +8,22 @@ A TechCare é uma empresa de suporte a clientes que lançou um Portal de Atendim
 # 🔧 Instalação
 
 Copie o repositório para uma pasta vazia
-```git clone {link}```
+```
+git clone {link}
+```
 
 Autorize a Org em que irá instalar o projeto
-```CTRL + ALT + P```
-```SFDX: Authorize an Org```
+```
+CTRL + ALT + P
+```
+```
+SFDX: Authorize an Org
+```
 
 Faça o deploy para sua Org
-```SFDX: Deploy This Source to Org```
+```
+SFDX: Deploy This Source to Org
+```
 
 # ⚙️ Execução dos Testes
 Abra a extensão testing e clique no botão de iniciar todos os testes. O coverage de toda a org está em 98%.
