@@ -2,7 +2,7 @@
 A TechCare é uma empresa de suporte a clientes que lançou um Portal de Atendimento em Salesforce. 
 
 # 📋 Documentações
-[Documentação Adm](./Documentation%20Adm.md)
+[Documentação Adm](./Documentation%20Adm.md) </ br>
 [Documentação Dev](./Documentation%20Dev.md)
 
 # 🔧 Instalação
