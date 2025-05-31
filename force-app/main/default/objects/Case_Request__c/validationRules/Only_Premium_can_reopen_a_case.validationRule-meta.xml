@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_Premium_can_reopen_a_case</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(PRIORVALUE(Status__c), &apos;Closed&apos;),
+    NOT(ISPICKVAL(Status__c, &apos;Closed&apos;)),
+    $User.UserRoleId &lt;&gt; &apos;00EgL000001k0Kb&apos;
+)</errorConditionFormula>
+    <errorMessage>Apenas usuários do suporte premium pode reabrir o caso! Contate alguém para pedir ajuda.</errorMessage>
+</ValidationRule>

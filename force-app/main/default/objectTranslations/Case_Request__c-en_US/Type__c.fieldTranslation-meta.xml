@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Tipo de suporte oferecido. --></help>
+    <label><!-- Tipo --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Atendimento ao Usuário</masterLabel>
+        <translation><!-- Atendimento ao Usuário --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consultoria Tecnológica</masterLabel>
+        <translation><!-- Consultoria Tecnológica --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Infraestrutura de Rede</masterLabel>
+        <translation><!-- Infraestrutura de Rede --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outro</masterLabel>
+        <translation><!-- Outro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Segurança da Informação</masterLabel>
+        <translation><!-- Segurança da Informação --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Suporte Técnico</masterLabel>
+        <translation><!-- Suporte Técnico --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Suporte a Dispositivos Móveis</masterLabel>
+        <translation><!-- Suporte a Dispositivos Móveis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Suporte a Software</masterLabel>
+        <translation><!-- Suporte a Software --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Suporte em Nuvem</masterLabel>
+        <translation><!-- Suporte em Nuvem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Treinamento e Capacitação</masterLabel>
+        <translation><!-- Treinamento e Capacitação --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

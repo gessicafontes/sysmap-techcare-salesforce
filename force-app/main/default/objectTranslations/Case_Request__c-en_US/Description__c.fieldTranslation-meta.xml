@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Coloque uma boa descrição que seja possível relembrar facilmente sobre o que se trata depois. --></help>
+    <label><!-- Descrição --></label>
+    <name>Description__c</name>
+</CustomFieldTranslation>

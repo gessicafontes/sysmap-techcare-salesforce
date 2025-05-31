@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Reason__c</fullName>
+    <label>Razão do caso</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Erro de Sistema</fullName>
+                <default>false</default>
+                <label>Erro de Sistema</label>
+            </value>
+            <value>
+                <fullName>Falha de Hardware</fullName>
+                <default>false</default>
+                <label>Falha de Hardware</label>
+            </value>
+            <value>
+                <fullName>Dificuldade de Acesso</fullName>
+                <default>false</default>
+                <label>Dificuldade de Acesso</label>
+            </value>
+            <value>
+                <fullName>Problemas de Conectividade</fullName>
+                <default>false</default>
+                <label>Problemas de Conectividade</label>
+            </value>
+            <value>
+                <fullName>Solicitação de Instalação</fullName>
+                <default>false</default>
+                <label>Solicitação de Instalação</label>
+            </value>
+            <value>
+                <fullName>Atualização de Software</fullName>
+                <default>false</default>
+                <label>Atualização de Software</label>
+            </value>
+            <value>
+                <fullName>Solicitação de Treinamento</fullName>
+                <default>false</default>
+                <label>Solicitação de Treinamento</label>
+            </value>
+            <value>
+                <fullName>Dúvida Operacional</fullName>
+                <default>false</default>
+                <label>Dúvida Operacional</label>
+            </value>
+            <value>
+                <fullName>Incidente de Segurança</fullName>
+                <default>false</default>
+                <label>Incidente de Segurança</label>
+            </value>
+            <value>
+                <fullName>Consulta sobre Serviços</fullName>
+                <default>false</default>
+                <label>Consulta sobre Serviços</label>
+            </value>
+            <value>
+                <fullName>Reclamação</fullName>
+                <default>false</default>
+                <label>Reclamação</label>
+            </value>
+            <value>
+                <fullName>Sugestão de Melhoria</fullName>
+                <default>false</default>
+                <label>Sugestão de Melhoria</label>
+            </value>
+            <value>
+                <fullName>Outro</fullName>
+                <default>false</default>
+                <label>Outro</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

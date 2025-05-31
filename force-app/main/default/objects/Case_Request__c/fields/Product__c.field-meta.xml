@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <label>Produto</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Computador Desktop</fullName>
+                <default>false</default>
+                <label>Computador Desktop</label>
+            </value>
+            <value>
+                <fullName>Notebook</fullName>
+                <default>false</default>
+                <label>Notebook</label>
+            </value>
+            <value>
+                <fullName>Servidor</fullName>
+                <default>false</default>
+                <label>Servidor</label>
+            </value>
+            <value>
+                <fullName>Impressora</fullName>
+                <default>false</default>
+                <label>Impressora</label>
+            </value>
+            <value>
+                <fullName>Roteador / Switch</fullName>
+                <default>false</default>
+                <label>Roteador / Switch</label>
+            </value>
+            <value>
+                <fullName>Sistema Operacional</fullName>
+                <default>false</default>
+                <label>Sistema Operacional</label>
+            </value>
+            <value>
+                <fullName>Software Corporativo</fullName>
+                <default>false</default>
+                <label>Software Corporativo</label>
+            </value>
+            <value>
+                <fullName>Aplicativo Mobile</fullName>
+                <default>false</default>
+                <label>Aplicativo Mobile</label>
+            </value>
+            <value>
+                <fullName>Sistema de Backup</fullName>
+                <default>false</default>
+                <label>Sistema de Backup</label>
+            </value>
+            <value>
+                <fullName>Firewall / Antivírus</fullName>
+                <default>false</default>
+                <label>Firewall / Antivírus</label>
+            </value>
+            <value>
+                <fullName>Serviços em Nuvem</fullName>
+                <default>false</default>
+                <label>Serviços em Nuvem</label>
+            </value>
+            <value>
+                <fullName>Outros Equipamentos</fullName>
+                <default>false</default>
+                <label>Outros Equipamentos</label>
+            </value>
+            <value>
+                <fullName>Outro</fullName>
+                <default>false</default>
+                <label>Outro</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

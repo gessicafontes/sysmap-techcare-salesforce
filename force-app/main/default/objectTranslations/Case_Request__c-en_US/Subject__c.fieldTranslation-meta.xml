@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Preencha um assunto que dê uma ideia geral do que se trata o caso. --></help>
+    <label><!-- Assunto --></label>
+    <name>Subject__c</name>
+</CustomFieldTranslation>

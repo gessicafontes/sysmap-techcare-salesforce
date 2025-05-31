@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Determinação do valor do SLA caso o cliente seja padrão ou premium.</description>
+        <name>SLA_Determination</name>
+        <label>SLA Determination</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default</defaultConnectorLabel>
+        <rules>
+            <name>Premium</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Premium_Record_Type_Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Premium_SLA</targetReference>
+            </connector>
+            <label>Premium</label>
+        </rules>
+        <rules>
+            <name>Standard</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Standard_Record_Type_Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Standard_SLA</targetReference>
+            </connector>
+            <label>Standard</label>
+        </rules>
+    </decisions>
+    <description>Atribuindo a data e hora do SLA dependendo se o cliente é premium ou standard.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Cálculo do SLA Premium para usuários premium onde o tempo limite de solução é de 8 horas.</description>
+        <name>SLA_Premium_Calculation</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW() + (8/24)</expression>
+    </formulas>
+    <formulas>
+        <description>Cálculo do SLA Standard para usuários standard onde o tempo limite de solução é de 24 horas.</description>
+        <name>SLA_Standard_Calculation</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW() + 1</expression>
+    </formulas>
+    <interviewLabel>Assigning SLA Date and Time {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Assigning SLA Date and Time</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Tempo do SLA Premium é de 8 horas a partir da abertura do caso.</description>
+        <name>Premium_SLA</name>
+        <label>Premium SLA</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>SLA_Deadline__c</field>
+            <value>
+                <elementReference>SLA_Premium_Calculation</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Standard_SLA</name>
+        <label>Standard SLA</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>SLA_Deadline__c</field>
+            <value>
+                <elementReference>SLA_Standard_Calculation</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>SLA_Determination</targetReference>
+        </connector>
+        <object>Case_Request__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Id do record type do tipo premium.</description>
+        <name>Premium_Record_Type_Id</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>012gL000000wbNNQAY</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Id do record type do tipo standard.</description>
+        <name>Standard_Record_Type_Id</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>012gL000000wbLlQAI</stringValue>
+        </value>
+    </variables>
+</Flow>

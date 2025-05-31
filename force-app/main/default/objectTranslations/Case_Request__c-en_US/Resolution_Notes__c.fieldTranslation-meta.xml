@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Explique como foi a solução do caso, suas facilidades e dificuldades. --></help>
+    <label><!-- Notas de resolução --></label>
+    <name>Resolution_Notes__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Priority__c</fullName>
+    <description>A prioridade de um caso determina a situação em que ele se encontra.</description>
+    <inlineHelpText>Verifique a descrição que colocou anteriormente e determine a prioridade para esse caso.</inlineHelpText>
+    <label>Prioridade</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Low</fullName>
+                <default>false</default>
+                <label>Baixa</label>
+            </value>
+            <value>
+                <fullName>Medium</fullName>
+                <default>true</default>
+                <label>Média</label>
+            </value>
+            <value>
+                <fullName>High</fullName>
+                <default>false</default>
+                <label>Alta</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
